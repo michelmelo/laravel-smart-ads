@@ -1,0 +1,61 @@
+{
+    "name": "michelmelo/laravel-smart-ads",
+    "description": "Ad, Banners, Callouts Manager for Laravel",
+    "keywords": [
+        "michelmelo",
+        "laravel-smart-ads"
+    ],
+    "homepage": "https://github.com/michelmelo/laravel-smart-ads",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Michel Melo",
+            "email": "eu@michelmelo.pt",
+            "role": "Developer"
+        },{
+            "name": "Tushar Gugnani",
+            "email": "tushar@michelmelo.info",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "livewire/livewire": "^2.12",
+        "spatie/laravel-package-tools": "^1.18"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.67",
+        "orchestra/testbench": "^7.6",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MichelMelo\\LaravelSmartAds\\": "src",
+            "MichelMelo\\LaravelSmartAds\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MichelMelo\\LaravelSmartAds\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MichelMelo\\LaravelSmartAds\\LaravelSmartAdsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSmartAds": "MichelMelo\\LaravelSmartAds\\LaravelSmartAdsFacade"
+            }
+        }
+    }
+}
